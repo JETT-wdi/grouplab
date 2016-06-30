@@ -3,7 +3,7 @@
 const api = require('./api');
 const ui = require('./ui');
 
-const onGetBooks = funtion() {
+const onGetBooks = function(event) {
    event.preventDefault();
    api.getBooks()
     .done(ui.successGetBook)
@@ -14,8 +14,6 @@ const onGetBooks = funtion() {
 const addHandlers = () => {
   $('#retrieve-data').on('submit', onGetBooks);
 };
-
-
 
 module.exports = {
   addHandlers,
