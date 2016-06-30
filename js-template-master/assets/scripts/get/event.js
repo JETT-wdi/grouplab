@@ -5,7 +5,6 @@ const ui = require('./ui');
 
 const onGetBooks = function(event) {
    event.preventDefault();
-   console.log("click worked")
    api.getBooks()
     .done(ui.successGetBook)
     .fail(ui.failure);
