@@ -12,7 +12,7 @@ const onGetBooks = funtion() {
 
 
 const addHandlers = () => {
-  $('#retrieve-data').on('click', onGetBooks);
+  $('#retrieve-data').on('submit', onGetBooks);
 };
 
 
