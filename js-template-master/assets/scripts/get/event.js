@@ -3,8 +3,9 @@
 const api = require('./api');
 const ui = require('./ui');
 
-const onGetBooks = funtion() {
+const onGetBooks = function(event) {
    event.preventDefault();
+   console.log("click worked")
    api.getBooks()
     .done(ui.successGetBook)
     .fail(ui.failure);
@@ -14,8 +15,6 @@ const onGetBooks = funtion() {
 const addHandlers = () => {
   $('#retrieve-data').on('submit', onGetBooks);
 };
-
-
 
 module.exports = {
   addHandlers,
